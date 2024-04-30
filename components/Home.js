@@ -152,11 +152,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   userPhoto: {
-    width: 70,
-    height: 70,
+    width: 90,
+    height: 90,
     borderRadius: 45,
-    marginRight: 20,
-    marginLeft: 20,
+    marginRight: 15,
+    marginLeft: 15
   },
   userInfo: {
     flexDirection: 'column',
@@ -165,17 +165,17 @@ const styles = StyleSheet.create({
   userName: {
     fontSize: 18,
     fontWeight: 'bold',
-    alignItems: 'left',
+    alignItems: 'center',
   },
   userPhone: {
     fontSize: 14,
     color: 'gray',
-    alignItems: 'left',
+    alignItems: 'center',
   },
   userEmail: {
     fontSize: 14,
     color: 'gray',
-    alignItems: 'left',
+    alignItems: 'center',
   },
 });
 export default Home;
