@@ -28,7 +28,7 @@ export default function App() {
      <NavigationContainer>
      
             <Header />
-            <SidebarIcon onPress={toggleSidebar} />
+            <SidebarIcon style={styles.container} onPress={toggleSidebar} />
             <Sidebar isOpen={isSidebarOpen} onClose={toggleSidebar} />
            
             <NavigationStack />
@@ -49,5 +49,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
     marginBottom: 20,
+  },
+  container: {
+    position: 'absolute',
+    top: 20,
+    left: 20,
+    zIndex: 1,
   },
 });

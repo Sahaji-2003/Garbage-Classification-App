@@ -59,10 +59,14 @@ const Login = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    ...StyleSheet.absoluteFillObject,
     alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#fff',
+    padding: 20,
+    position: 'relative',
     paddingHorizontal: 50,
-    width: '100%',
+    width:'100%',
   },
   title: {
     fontSize: 24,

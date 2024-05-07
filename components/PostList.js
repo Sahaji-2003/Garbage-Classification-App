@@ -87,8 +87,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     marginBottom: 24,
     padding: 16,
-    borderRadius: 8,
-    elevation: 3,
+    borderRadius: 10,
+    elevation: 5,
   },
   type: {
     fontSize: 20, // Increase font size

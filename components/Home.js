@@ -92,7 +92,7 @@ const Home = ({ navigation, route }) => {
         </Text>
 
                <TouchableOpacity style={styles.uploadButton} onPress={handleDetails}>
-        <Text style={styles.buttonText}>Garbage Types?</Text>
+        <Text style={styles.buttonText}>Garbage Types ?</Text>
       </TouchableOpacity>
 
         <Image source={require('../assets/waste7.jpeg')} style={styles.image} />
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     height: 200,
     marginBottom: 30,
     borderRadius: 10,
-    marginTop: 20
+    marginTop: 20,
   },
   uploadButton: {
     backgroundColor: 'green',

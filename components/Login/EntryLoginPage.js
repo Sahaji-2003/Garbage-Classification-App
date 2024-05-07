@@ -16,7 +16,7 @@ export default function EntryLoginPage({ navigation }) {
   };
 
   return (
-    <ScrollView>
+    
     <View style={styles.container}>
      <Text style={styles.heading}> Garbage Classification  </Text>
       <Image source={require('../../assets/green-apple.jpg')} style={styles.logo} />
@@ -30,18 +30,21 @@ export default function EntryLoginPage({ navigation }) {
 
      
     </View>
-    </ScrollView>
+   
   )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    ...StyleSheet.absoluteFillObject,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#fff',
+    padding: 20,
+    position: 'relative',
+    paddingHorizontal: 50,
     width:'100%',
-    height:'100%',
     
   },
   logo: {
@@ -57,6 +60,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   button: {
+    marginTop: 20,
     backgroundColor: '#28a745', // Green color for Login button
     paddingVertical: 12,
     paddingHorizontal: 30,
