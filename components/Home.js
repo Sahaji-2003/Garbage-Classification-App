@@ -21,7 +21,7 @@ const Home = ({ navigation, route }) => {
   const fetchUserInfo = async (user_name, user_password) => {
     try {
       // Make a POST request to login endpoint with user credentials
-      const response = await fetch('http://192.168.1.5:5000/api/login', {
+      const response = await fetch('http://192.168.1.2:5000/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -46,6 +46,9 @@ const Home = ({ navigation, route }) => {
 
   const handleTryNow = () => {
     navigation.navigate('Ecolense'); // Navigate to the EcoLens screen
+  };
+  const handleDetails = () => {
+    navigation.navigate('PostList'); // Navigate to the EcoLens screen
   };
   const userPhoto = require('../assets/man-face.jpg');
 
@@ -87,6 +90,11 @@ const Home = ({ navigation, route }) => {
           categories such as organic, recyclable, and non-recyclable. Proper
           segregation helps in recycling and reducing environmental pollution.
         </Text>
+
+               <TouchableOpacity style={styles.uploadButton} onPress={handleDetails}>
+        <Text style={styles.buttonText}>Garbage Types?</Text>
+      </TouchableOpacity>
+
         <Image source={require('../assets/waste7.jpeg')} style={styles.image} />
         <Text style={styles.infoText}>
           Organic waste includes food scraps and plant materials. Recyclable
@@ -113,7 +121,7 @@ const styles = StyleSheet.create({
     height: 200,
     marginBottom: 30,
     borderRadius: 10,
-    marginTop: 30
+    marginTop: 20
   },
   uploadButton: {
     backgroundColor: 'green',
@@ -121,7 +129,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
     borderRadius: 5,
     marginBottom: 20,
-    marginTop: 10,
+    marginTop: 15,
   },
   buttonText: {
     color: '#fff',
@@ -152,11 +160,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   userPhoto: {
-    width: 90,
-    height: 90,
+    width: 70,
+    height: 70,
     borderRadius: 45,
-    marginRight: 15,
-    marginLeft: 15
+    marginRight: 20,
+    marginLeft: 20,
   },
   userInfo: {
     flexDirection: 'column',
@@ -165,17 +173,17 @@ const styles = StyleSheet.create({
   userName: {
     fontSize: 18,
     fontWeight: 'bold',
-    alignItems: 'center',
+    alignItems: 'left',
   },
   userPhone: {
     fontSize: 14,
     color: 'gray',
-    alignItems: 'center',
+    alignItems: 'left',
   },
   userEmail: {
     fontSize: 14,
     color: 'gray',
-    alignItems: 'center',
+    alignItems: 'left',
   },
 });
 export default Home;

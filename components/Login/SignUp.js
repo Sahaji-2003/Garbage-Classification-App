@@ -17,7 +17,7 @@ const SignUp = ({ navigation }) => {
     try {
       
       // Send POST request to server to save user details
-      await axios.post('http://192.168.1.5:5000/api/data', {
+      await axios.post('http://192.168.1.2:5000/api/data', {
         
         user_name: user_name,
         first_name: firstName,
