@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView} from 'react-native';
 import axios from 'axios';
 
 const SignUp = ({ navigation }) => {
@@ -36,6 +36,7 @@ const SignUp = ({ navigation }) => {
   };
 
   return (
+    <ScrollView >
     <View style={styles.container}>
       <Text style={styles.title}>Sign Up</Text>
       <TextInput
@@ -85,6 +86,7 @@ const SignUp = ({ navigation }) => {
         <Text style={styles.link}>Already have an account? Login</Text>
       </TouchableOpacity>
     </View>
+    </ScrollView>
   );
 };
 
@@ -114,6 +116,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   button: {
+    marginTop: 8,
     width: '100%',
     height: 40,
     backgroundColor: '#007bff',
