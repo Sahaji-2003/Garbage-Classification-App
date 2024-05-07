@@ -7,7 +7,7 @@ import Ecolense from './Ecolense'
 import EntryLoginPage from './Login/EntryLoginPage'
 import SignUp from './Login/SignUp'
 import Login from './Login/Login'
-
+import PostList from './PostList'
 
 const Stack = createStackNavigator();
 
@@ -17,7 +17,8 @@ const NavigationStack = () => {
       <Stack.Screen name="EntryLoginPage" component={EntryLoginPage} options={{ headerShown: false }} />
       <Stack.Screen name="SignUp" component={SignUp} />
       <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Home" component={Home} options={{ headerShown: false }}/>
+      <Stack.Screen name="PostList" component={PostList} options={{ headerShown: false }}/>
       <Stack.Screen name="Ecolense" component={Ecolense} />
 
     </Stack.Navigator>

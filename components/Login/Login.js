@@ -10,7 +10,7 @@ const Login = ({ navigation }) => {
   const handleLogin = async () => {
     try {
       // Send POST request to server to authenticate user
-      const response = await axios.post('http://192.168.1.5:5000/api/login', {
+      const response = await axios.post('http://192.168.1.2:5000/api/login', {
         user_name,
         user_password
       });
